@@ -53,11 +53,11 @@ The core analytical question is: **Where are the persistent gaps in healthcare a
 
 Equitable access to healthcare is a prerequisite for healthy, resilient communities. Yet in rapidly urbanizing states like Odisha, the spatial distribution of health facilities often lags behind population growth and settlement expansion, creating persistent access gaps that disproportionately burden rural and peri-urban populations. The challenge is threefold:
 
-1. **Measurement gap.** Simple facility-to-population ratios ignore the spatial dimension entirely. A district might have an adequate number of beds on paper but poor geographic coverage, leaving large pockets of the population beyond reasonable travel distance.
+1. **Measurement gap:** Simple facility-to-population ratios ignore the spatial dimension entirely. A district might have an adequate number of beds on paper but poor geographic coverage, leaving large pockets of the population beyond reasonable travel distance.
 
-2. **Analytical gap.** Conventional analyses treat the state as a uniform planning unit. But the determinants of access inequity (road connectivity, urbanization, poverty, terrain) vary dramatically across Odisha's diverse geography, from the coastal plains of Puri to the tribal highlands of Malkangiri. Uniform statewide policies cannot capture this heterogeneity.
+2. **Analytical gap:** Conventional analyses treat the state as a uniform planning unit. But the determinants of access inequity (road connectivity, urbanization, poverty, terrain) vary dramatically across Odisha's diverse geography, from the coastal plains of Puri to the tribal highlands of Malkangiri. Uniform statewide policies cannot capture this heterogeneity.
 
-3. **Intervention gap.** Even when underserved zones are identified, the type of intervention required differs by context. A demand-strained peri-urban area needs more beds at existing facilities. A remote tribal area needs entirely new facility placement. A geographically isolated community needs mobile health units. Without a typology of access profiles, planning remains one-size-fits-all.
+3. **Intervention gap:** Even when underserved zones are identified, the type of intervention required differs by context. A demand-strained peri-urban area needs more beds at existing facilities. A remote tribal area needs entirely new facility placement. A geographically isolated community needs mobile health units. Without a typology of access profiles, planning remains one-size-fits-all.
 
 This project addresses all three gaps using a combination of spatial statistics, econometrics, and machine learning, producing outputs that are directly usable for regionally differentiated health infrastructure planning.
 

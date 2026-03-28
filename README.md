@@ -15,6 +15,12 @@
 </p>
 
 <p align="center">
+  <a href="https://ujjwalks96.github.io/regional-health-accessibility-india/output/dashboard.html" target="_blank">
+    <img src="https://img.shields.io/badge/%F0%9F%97%BA%EF%B8%8F_Explore_Interactive_Dashboard-Click_Here-2ea44f?style=for-the-badge" alt="Interactive Dashboard"/>
+  </a>
+</p>
+
+<p align="center">
   <img src="output/figures/02_accessibility_index.png" width="800" alt="Healthcare Accessibility Index Map"/>
 </p>
 
@@ -53,11 +59,11 @@ The core analytical question is: **Where are the persistent gaps in healthcare a
 
 Equitable access to healthcare is a prerequisite for healthy, resilient communities. Yet in rapidly urbanizing states like Odisha, the spatial distribution of health facilities often lags behind population growth and settlement expansion, creating persistent access gaps that disproportionately burden rural and peri-urban populations. The challenge is threefold:
 
-1. **Measurement gap:** Simple facility-to-population ratios ignore the spatial dimension entirely. A district might have an adequate number of beds on paper but poor geographic coverage, leaving large pockets of the population beyond reasonable travel distance.
+1. **Measurement gap.** Simple facility-to-population ratios ignore the spatial dimension entirely. A district might have an adequate number of beds on paper but poor geographic coverage, leaving large pockets of the population beyond reasonable travel distance.
 
-2. **Analytical gap:** Conventional analyses treat the state as a uniform planning unit. But the determinants of access inequity (road connectivity, urbanization, poverty, terrain) vary dramatically across Odisha's diverse geography, from the coastal plains of Puri to the tribal highlands of Malkangiri. Uniform statewide policies cannot capture this heterogeneity.
+2. **Analytical gap.** Conventional analyses treat the state as a uniform planning unit. But the determinants of access inequity (road connectivity, urbanization, poverty, terrain) vary dramatically across Odisha's diverse geography, from the coastal plains of Puri to the tribal highlands of Malkangiri. Uniform statewide policies cannot capture this heterogeneity.
 
-3. **Intervention gap:** Even when underserved zones are identified, the type of intervention required differs by context. A demand-strained peri-urban area needs more beds at existing facilities. A remote tribal area needs entirely new facility placement. A geographically isolated community needs mobile health units. Without a typology of access profiles, planning remains one-size-fits-all.
+3. **Intervention gap.** Even when underserved zones are identified, the type of intervention required differs by context. A demand-strained peri-urban area needs more beds at existing facilities. A remote tribal area needs entirely new facility placement. A geographically isolated community needs mobile health units. Without a typology of access profiles, planning remains one-size-fits-all.
 
 This project addresses all three gaps using a combination of spatial statistics, econometrics, and machine learning, producing outputs that are directly usable for regionally differentiated health infrastructure planning.
 
@@ -432,19 +438,13 @@ The Random Forest achieves a cross-validated R2 of 0.938 (vs. 0.239 for OLS), co
 
 ## References
 
-1. Luo, W. and Qi, Y. (2009). An enhanced two-step floating catchment area (E2SFCA) method for measuring spatial accessibility to primary care physicians. *Health and Place*, 15(4), 1100-1107.
-
-2. McGrail, M.R. and Humphreys, J.S. (2009). Measuring spatial accessibility to primary care in rural areas: Improving the effectiveness of the two-step floating catchment area method. *Applied Geography*, 29(4), 533-541.
-
-3. Anselin, L. (1995). Local indicators of spatial association (LISA). *Geographical Analysis*, 27(2), 93-115.
-
-4. Getis, A. and Ord, J.K. (1992). The analysis of spatial association by use of distance statistics. *Geographical Analysis*, 24(3), 189-206.
-
-5. Brunsdon, C., Fotheringham, A.S. and Charlton, M.E. (1996). Geographically weighted regression: A method for exploring spatial nonstationarity. *Geographical Analysis*, 28(4), 281-298.
-
-6. Lundberg, S.M. and Lee, S.I. (2017). A unified approach to interpreting model predictions. *Advances in Neural Information Processing Systems*, 30.
-
-7. Liu, F.T., Ting, K.M. and Zhou, Z.H. (2008). Isolation forest. *2008 Eighth IEEE International Conference on Data Mining*, 413-422.
+- Luo, W., & Qi, Y. (2009). An enhanced two-step floating catchment area (E2SFCA) method for measuring spatial accessibility to primary care physicians. Health & Place, 15(4), 1100–1107. https://doi.org/10.1016/j.healthplace.2009.06.002
+- McGrail, M. R., & Humphreys, J. S. (2009). Measuring spatial accessibility to primary care in rural areas: Improving the effectiveness of the two-step floating catchment area method. Applied Geography, 29(4), 533–541. https://doi.org/10.1016/j.apgeog.2008.12.003
+- Anselin, L. (1995). Local indicators of spatial association—LISA. Geographical Analysis, 27(2), 93–115.
+- Getis, A., & Ord, J. K. (1992). The analysis of spatial association by use of distance statistics. Geographical Analysis, 24(3), 189–206.
+- Brunsdon, C., Fotheringham, A. S., & Charlton, M. E. (1996). Geographically weighted regression: A method for exploring spatial nonstationarity. Geographical Analysis, 28(4), 281–298.
+- Lundberg, S. M., & Lee, S.-I. (2017). A unified approach to interpreting model predictions. In Advances in Neural Information Processing Systems (Vol. 30).
+- Liu, F. T., Ting, K. M., & Zhou, Z.-H. (2008). Isolation forest. In Proceedings of the 2008 IEEE International Conference on Data Mining (pp. 413–422). https://doi.org/10.1109/ICDM.2008.17
 
 ---
 

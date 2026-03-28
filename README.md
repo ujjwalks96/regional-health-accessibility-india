@@ -57,15 +57,59 @@ The core analytical question is: **Where are the persistent gaps in healthcare a
 
 ## Rationale
 
-Equitable access to healthcare is a prerequisite for healthy, resilient communities. Yet in rapidly urbanizing states like Odisha, the spatial distribution of health facilities often lags behind population growth and settlement expansion, creating persistent access gaps that disproportionately burden rural and peri-urban populations. The challenge is threefold:
+## Rationale
 
-1. **Measurement gap.** Simple facility-to-population ratios ignore the spatial dimension entirely. A district might have an adequate number of beds on paper but poor geographic coverage, leaving large pockets of the population beyond reasonable travel distance.
+Odisha presents a particularly sharp version of the healthcare access challenge. The state spans
+three distinct physiographic zones: a densely populated coastal plain in the east, a central
+river basin, and the western highlands that include some of India's most remote tribal districts
+(Malkangiri, Koraput, Rayagada, Kandhamal). These districts consistently rank among the lowest
+on national health indicators, yet standard planning metrics like the facility-to-population
+ratio at the district level mask the spatial granularity of the problem. A district might meet
+national norms on paper while leaving entire blocks beyond any reasonable travel distance to
+a health facility.
 
-2. **Analytical gap.** Conventional analyses treat the state as a uniform planning unit. But the determinants of access inequity (road connectivity, urbanization, poverty, terrain) vary dramatically across Odisha's diverse geography, from the coastal plains of Puri to the tribal highlands of Malkangiri. Uniform statewide policies cannot capture this heterogeneity.
+Three specific gaps motivate this work:
 
-3. **Intervention gap.** Even when underserved zones are identified, the type of intervention required differs by context. A demand-strained peri-urban area needs more beds at existing facilities. A remote tribal area needs entirely new facility placement. A geographically isolated community needs mobile health units. Without a typology of access profiles, planning remains one-size-fits-all.
+> ### `01` Measurement Gap
+> **Problem:** The most commonly used access metric in Indian health planning is the
+> facility-to-population ratio at the district or block level. This is aspatial: it counts beds
+> and people but ignores where they are relative to each other. Two blocks with identical ratios
+> can have vastly different access realities depending on how facilities and settlements are
+> distributed within them.
+>
+> **This project's response:** Gravity-based E2SFCA at sub-district (hex-cell) resolution,
+> accounting for both distance decay and demand competition across the entire state.
 
-This project addresses all three gaps using a combination of spatial statistics, econometrics, and machine learning, producing outputs that are directly usable for regionally differentiated health infrastructure planning.
+> ### `02` Analytical Gap
+> **Problem:** Even when spatial access is measured, the conventional approach is to map it and
+> stop there. But the *drivers* of access inequity vary across space. Road connectivity matters
+> more in the western highlands than in the coastal plain. Population density creates demand
+> pressure in the Bhubaneswar-Cuttack corridor that does not exist in Kalahandi. OLS regression
+> produces a single statewide coefficient for each predictor, which is misleading when the
+> relationships are geographically non-stationary.
+>
+> **This project's response:** A progressive modelling strategy (OLS &#8594; SLM &#8594; SEM &#8594; GWR)
+> combined with Random Forest + SHAP to capture non-linear thresholds that parametric models miss.
+
+> ### `03` Intervention Design Gap
+> **Problem:** Identifying that "western Odisha is underserved" is not actionable. Planners need
+> to know *why* each zone is underserved and *what type* of intervention fits:
+>
+> | Condition | Intervention Needed |
+> |-----------|-------------------|
+> | Facilities exist but overwhelmed by demand | &#8594; Capacity expansion (more beds, staff) |
+> | No facility within 30 minutes | &#8594; New facility placement |
+> | Permanent facility infeasible (extreme isolation) | &#8594; Mobile health units, telemedicine |
+>
+> Without a data-driven typology, planning defaults to uniform statewide policies that address
+> none of these contexts well.
+>
+> **This project's response:** K-Means geodemographic profiling + Isolation Forest anomaly
+> detection to produce a five-class intervention typology tied to specific policy actions.
+
+<p align="center">
+  <code>Measurement (E2SFCA)</code> &#8594; <code>Explanation (ESDA + Regression)</code> &#8594; <code>Prediction (RF + SHAP)</code> &#8594; <code>Intervention (K-Means + Isolation Forest)</code>
+</p>
 
 ---
 
